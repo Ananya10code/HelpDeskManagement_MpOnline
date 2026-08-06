@@ -1,133 +1,176 @@
-# Help Desk Ticket Management System 🎫
+# 🎫 Help Desk Ticket Management System
 
-A complete full-stack enterprise support ticket management solution. This project allows employees to raise, track, and manage software, hardware, and network-related support requests through a responsive web interface.
+A modern full-stack Help Desk application designed to simplify IT support operations. The platform enables employees to create, monitor, update, and manage software, hardware, and network support requests through an intuitive web interface.
 
-## 🏗️ Solution Architecture
+---
 
-The solution is built using a decoupled, multi-tier architecture to ensure separation of concerns. Below is the complete repository structure:
+# 📂 Project Architecture
+
+The application follows a clean multi-layer architecture, separating presentation, business logic, and data access for better maintainability and scalability.
 
 ```text
 HelpDeskManagement/
-├── HelpDesk.Api/                   # ASP.NET Core Web API
+│
+├── HelpDesk.Api/
 │   ├── Controllers/
-│   │   └── TicketController.cs     # REST API Endpoints (/api/Ticket/...)
 │   ├── Data/
-│   │   └── HelpDeskDbContext.cs    # EF Core DbContext
-│   ├── Migrations/                 # EF Core Migrations
+│   ├── Migrations/
 │   ├── Models/
-│   │   └── Ticket.cs               # Core Ticket Entity Model
 │   ├── Repositories/
-│   │   ├── ITicketRepository.cs    # Repository Interface
-│   │   └── TicketRepository.cs     # Repository Implementation (EF Core)
-│   ├── appsettings.json            # Database connection & config
-│   └── Program.cs                  # DI, CORS & Swagger configuration
-├── HelpDesk.Mvc/                   # ASP.NET Core MVC Application
+│   ├── appsettings.json
+│   └── Program.cs
+│
+├── HelpDesk.Mvc/
 │   ├── Controllers/
-│   │   ├── HomeController.cs       # Dashboard metrics & analytics
-│   │   └── TicketController.cs     # Ticket management UI actions
 │   ├── Models/
-│   │   ├── DashboardViewModel.cs   # Metric summary view model
-│   │   └── Ticket.cs               # Validated Ticket model
 │   ├── Services/
-│   │   ├── ITicketService.cs       # Service Layer Interface
-│   │   └── TicketService.cs        # HttpClient API Consumer
 │   ├── Views/
-│   │   ├── Home/
-│   │   │   └── Index.cshtml        # Dashboard (Total, Open, Closed stats)
-│   │   ├── Ticket/
-│   │   │   ├── Index.cshtml        # View All Tickets
-│   │   │   ├── Details.cshtml      # View Ticket Details
-│   │   │   ├── Create.cshtml       # Raise Ticket (Status="Open")
-│   │   │   ├── Edit.cshtml         # Edit Ticket (Status/Priority dropdowns)
-│   │   │   ├── Delete.cshtml       # Delete Confirmation
-│   │   │   └── Filter.cshtml       # Filter Tickets by Status
-│   │   └── Shared/
-│   │       ├── _Layout.cshtml      # Responsive Bootstrap 5 Layout
-│   │       └── _ValidationScriptsPartial.cshtml
-│   ├── appsettings.json            # API BaseUrl configuration
-│   └── Program.cs                  # Typed HttpClient registration
-├── HelpDesk.Tests/                 # xUnit & Moq Unit Test Project
-│   └── TicketControllerTests.cs    # Unit tests covering all controller endpoints
-├── HelpDeskManagement.sln          # Visual Studio Solution File
-├── .gitignore                      # Git ignore rules for .NET
-└── README.md                       # System documentation
+│   ├── appsettings.json
+│   └── Program.cs
+│
+├── HelpDesk.Tests/
+│
+├── HelpDeskManagement.sln
+├── README.md
+└── .gitignore
 ```
 
-## 🚀 Key Features
+---
 
-*   **Interactive Dashboard:** Displays real-time metrics for Total, Open, and Closed tickets.
-*   **Ticket Lifecycle Management:** Create, Read, Update, and Delete (CRUD) support requests.
-*   **Dynamic Filtering:** Instantly filter the ticket list by status (Open, In Progress, Closed).
-*   **Status Enforcement:** System strictly defaults new tickets to an "Open" status.
-*   **Robust Unit Testing:** Validates API responses (Ok, NotFound, BadRequest) using xUnit and Moq.
+# ✨ Highlights
 
-## 💻 Technologies Used
-
-*   **Framework:** .NET 10.0
-*   **Backend:** C#, ASP.NET Core Web API
-*   **Frontend:** ASP.NET Core MVC, Razor Pages, HTML5, CSS3, Bootstrap 5
-*   **Database ORM:** Entity Framework Core
-*   **Database:** MS SQL Server (LocalDB)
-*   **Testing:** xUnit, Moq
-*   **Version Control:** Git, GitHub
+- 📊 Dashboard displaying Total, Open, and Closed ticket statistics.
+- 📝 Complete CRUD functionality for support tickets.
+- 🔍 Filter tickets based on their current status.
+- 🚦 New tickets are automatically assigned an **Open** status.
+- ✅ Unit testing implemented using xUnit and Moq for API validation.
+- 🏗️ Layered architecture following clean coding principles.
+- 📱 Responsive user interface built with Bootstrap.
 
 ---
 
-## ⚙️ Prerequisites
+# 🛠 Tech Stack
 
-To run this project locally, ensure you have the following installed:
-*   [Visual Studio 2022](https://visualstudio.microsoft.com/) (or newer) with the **ASP.NET and web development** workload.
-*   [.NET 10.0 SDK](https://dotnet.microsoft.com/download)
-*   SQL Server Express or LocalDB (included with Visual Studio).
+| Category | Technologies |
+|----------|--------------|
+| Framework | .NET 10 |
+| Backend | ASP.NET Core Web API, C# |
+| Frontend | ASP.NET Core MVC, Razor Views, HTML5, CSS3, Bootstrap 5 |
+| ORM | Entity Framework Core |
+| Database | SQL Server LocalDB |
+| Testing | xUnit, Moq |
+| Version Control | Git & GitHub |
 
 ---
 
-## 🛠️ Getting Started
+# ⚙ Prerequisites
 
-Follow these steps to clone the repository, set up the database, and run the application.
+Before running the application, install:
 
-### 1. Clone the Repository
-Open your terminal or Git Bash and run the following commands:
+- Visual Studio 2022 (or later) with the **ASP.NET and Web Development** workload
+- .NET 10 SDK
+- SQL Server Express or LocalDB
+
+---
+
+# 🚀 Installation & Setup
+
+## Clone the Repository
+
 ```bash
 git clone https://github.com/your-username/HelpDeskManagement.git
 cd HelpDeskManagement
 ```
 
-### 2. Open the Solution
-*   Open Visual Studio.
-*   Click **Open a project or solution**.
-*   Navigate to the cloned folder and open the `HelpDeskManagement.sln` file.
+## Open the Solution
 
-### 3. Database Setup (Migrations)
-The API is configured to use LocalDB by default. To generate the SQL Server database and tables:
-1.  In Visual Studio, go to **Tools** > **NuGet Package Manager** > **Package Manager Console**.
-2.  Ensure the **Default project** dropdown at the top of the console is set to `HelpDesk.Api`.
-3.  Run the following command to apply the migration and create the database:
+Launch Visual Studio and open the **HelpDeskManagement.sln** solution file.
+
+---
+
+## Configure the Database
+
+Open **Package Manager Console**, select **HelpDesk.Api** as the default project, and execute:
+
 ```powershell
 Update-Database
 ```
 
-### 4. Run the Application
-To experience the full system, both the API and MVC projects need to run simultaneously. 
-1.  Right-click the **HelpDeskManagement** solution in the Solution Explorer.
-2.  Select **Configure Startup Projects...**
-3.  Choose **Multiple startup projects**.
-4.  Set the action for both `HelpDesk.Api` and `HelpDesk.Mvc` to **Start**.
-5.  Click **OK**, then press **F5** (or the green Start button) to launch both applications. 
-
-*(Note: Ensure the API port running in your browser matches the `BaseAddress` configured in your MVC project's `TicketService` or `appsettings.json`).*
+This command creates the required SQL Server database and tables using Entity Framework Core migrations.
 
 ---
 
-## 📡 API Endpoints
+## Launch the Application
 
-The `HelpDesk.Api` exposes the following RESTful endpoints:
+To run both projects together:
 
-| HTTP Method | Endpoint | Description |
-| :--- | :--- | :--- |
-| `GET` | `/api/Ticket/All` | Retrieves all tickets |
-| `GET` | `/api/Ticket/{id}` | Retrieves a specific ticket by its ID |
-| `POST` | `/api/Ticket` | Creates a new support ticket |
-| `PUT` | `/api/Ticket/{id}` | Updates an existing ticket |
-| `DELETE` | `/api/Ticket/{id}` | Permanently deletes a ticket |
-| `GET` | `/api/Ticket/Status/{status}` | Filters and retrieves tickets by status |
+1. Right-click the solution.
+2. Select **Configure Startup Projects**.
+3. Choose **Multiple Startup Projects**.
+4. Set both **HelpDesk.Api** and **HelpDesk.Mvc** to **Start**.
+5. Press **F5**.
+
+> Ensure the API URL matches the BaseAddress configured in the MVC application.
+
+---
+
+# 📡 REST API
+
+| Method | Route | Purpose |
+|--------|-------|---------|
+| GET | `/api/Ticket/All` | Retrieve all tickets |
+| GET | `/api/Ticket/{id}` | Retrieve a ticket by ID |
+| POST | `/api/Ticket` | Create a new ticket |
+| PUT | `/api/Ticket/{id}` | Update an existing ticket |
+| DELETE | `/api/Ticket/{id}` | Delete a ticket |
+| GET | `/api/Ticket/Status/{status}` | Retrieve tickets by status |
+
+---
+
+# 📈 Project Features
+
+### Dashboard
+- View ticket analytics in real time.
+- Monitor Open and Closed ticket counts.
+
+### Ticket Management
+- Create support requests.
+- Edit ticket details.
+- Delete tickets.
+- View ticket history.
+
+### Status Tracking
+- Open
+- In Progress
+- Closed
+
+### Search & Filter
+- Quickly locate tickets by status.
+
+### Testing
+- Comprehensive controller testing using xUnit and Moq.
+
+---
+
+# 📌 Project Benefits
+
+- Clean layered architecture
+- Easy to extend and maintain
+- RESTful API design
+- Responsive Bootstrap interface
+- Entity Framework Core integration
+- Well-structured codebase
+- Unit-tested backend
+
+---
+
+# 👨‍💻 Future Enhancements
+
+- User authentication and authorization
+- Email notifications
+- Ticket priority analytics
+- File attachment support
+- Role-based dashboards
+- Advanced search functionality
+
+---
