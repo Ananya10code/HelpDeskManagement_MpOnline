@@ -8,32 +8,6 @@ A modern full-stack Help Desk application designed to simplify IT support operat
 
 The application follows a clean multi-layer architecture, separating presentation, business logic, and data access for better maintainability and scalability.
 
-```text
-HelpDeskManagement/
-│
-├── HelpDesk.Api/
-│   ├── Controllers/
-│   ├── Data/
-│   ├── Migrations/
-│   ├── Models/
-│   ├── Repositories/
-│   ├── appsettings.json
-│   └── Program.cs
-│
-├── HelpDesk.Mvc/
-│   ├── Controllers/
-│   ├── Models/
-│   ├── Services/
-│   ├── Views/
-│   ├── appsettings.json
-│   └── Program.cs
-│
-├── HelpDesk.Tests/
-│
-├── Ananya_HelpDeskManagement.slnx
-├── README.md
-└── .gitignore
-```
 
 ---
 
