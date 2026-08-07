@@ -30,7 +30,7 @@ HelpDeskManagement/
 │
 ├── HelpDesk.Tests/
 │
-├── HelpDeskManagement.sln
+├── Ananya_HelpDeskManagement.slnx
 ├── README.md
 └── .gitignore
 ```
