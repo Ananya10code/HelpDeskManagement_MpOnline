@@ -52,7 +52,7 @@ Before running the application, install:
 ## Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/HelpDeskManagement.git
+git clone https://github.com/Ananya10code/HelpDeskManagement_MpOnline.git
 cd HelpDeskManagement
 ```
 
