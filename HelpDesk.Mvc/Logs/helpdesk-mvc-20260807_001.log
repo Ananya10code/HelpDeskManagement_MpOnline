@@ -1,0 +1,317 @@
+2026-08-07 17:59:09.041 +05:30 [INF] Starting HelpDesk.Mvc
+2026-08-07 17:59:09.553 +05:30 [INF] User profile is available. Using 'C:\Users\DeLL\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-08-07 17:59:09.670 +05:30 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
+2026-08-07 17:59:09.760 +05:30 [ERR] Hosting failed to start
+System.IO.IOException: Failed to bind to address https://127.0.0.1:59188: address already in use.
+ ---> Microsoft.AspNetCore.Connections.AddressInUseException: Only one usage of each socket address (protocol/network address/port) is normally permitted.
+ ---> System.Net.Sockets.SocketException (10048): Only one usage of each socket address (protocol/network address/port) is normally permitted.
+   at System.Net.Sockets.Socket.UpdateStatusAfterSocketErrorAndThrowException(SocketError error, Boolean disconnectOnFailure, String callerName)
+   at System.Net.Sockets.Socket.DoBind(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Bind(EndPoint localEP)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransportOptions.CreateDefaultBoundListenSocket(EndPoint endpoint)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransportFactory.BindAsync(EndPoint endpoint, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Infrastructure.TransportManager.BindAsync(EndPoint endPoint, ConnectionDelegate connectionDelegate, EndpointConfig endpointConfig, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.<>c__DisplayClass28_0`1.<<StartAsync>g__OnBind|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.LocalhostListenOptions.BindAsync(AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.AddressesStrategy.BindAsync(AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindAsync(ListenOptions[] listenOptions, AddressBindContext context, Func`2 useHttps, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.BindAsync(CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.StartAsync[TContext](IHttpApplication`1 application, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.Internal.Host.<StartAsync>b__15_1(IHostedService service, CancellationToken token)
+   at Microsoft.Extensions.Hosting.Internal.Host.ForeachService[T](IEnumerable`1 services, CancellationToken token, Boolean concurrent, Boolean abortOnFirstException, List`1 exceptions, Func`3 operation)
+2026-08-07 17:59:09.785 +05:30 [FTL] HelpDesk.Mvc terminated unexpectedly during startup
+System.IO.IOException: Failed to bind to address https://127.0.0.1:59188: address already in use.
+ ---> Microsoft.AspNetCore.Connections.AddressInUseException: Only one usage of each socket address (protocol/network address/port) is normally permitted.
+ ---> System.Net.Sockets.SocketException (10048): Only one usage of each socket address (protocol/network address/port) is normally permitted.
+   at System.Net.Sockets.Socket.UpdateStatusAfterSocketErrorAndThrowException(SocketError error, Boolean disconnectOnFailure, String callerName)
+   at System.Net.Sockets.Socket.DoBind(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Bind(EndPoint localEP)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransportOptions.CreateDefaultBoundListenSocket(EndPoint endpoint)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransportFactory.BindAsync(EndPoint endpoint, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Infrastructure.TransportManager.BindAsync(EndPoint endPoint, ConnectionDelegate connectionDelegate, EndpointConfig endpointConfig, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.<>c__DisplayClass28_0`1.<<StartAsync>g__OnBind|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.LocalhostListenOptions.BindAsync(AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.AddressesStrategy.BindAsync(AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindAsync(ListenOptions[] listenOptions, AddressBindContext context, Func`2 useHttps, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.BindAsync(CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.StartAsync[TContext](IHttpApplication`1 application, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.Internal.Host.<StartAsync>b__15_1(IHostedService service, CancellationToken token)
+   at Microsoft.Extensions.Hosting.Internal.Host.ForeachService[T](IEnumerable`1 services, CancellationToken token, Boolean concurrent, Boolean abortOnFirstException, List`1 exceptions, Func`3 operation)
+   at Microsoft.Extensions.Hosting.Internal.Host.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.Run(IHost host)
+   at Program.<Main>$(String[] args) in E:\MP Online\8aug\HelpDeskManagment\HelpDesk.Mvc\Program.cs:line 51
+2026-08-07 18:01:43.550 +05:30 [INF] Starting HelpDesk.Mvc
+2026-08-07 18:01:43.951 +05:30 [INF] User profile is available. Using 'C:\Users\DeLL\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-08-07 18:01:44.038 +05:30 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
+2026-08-07 18:01:44.074 +05:30 [INF] Now listening on: https://localhost:59188
+2026-08-07 18:01:44.074 +05:30 [INF] Now listening on: http://localhost:59189
+2026-08-07 18:01:44.076 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-08-07 18:01:44.077 +05:30 [INF] Hosting environment: Development
+2026-08-07 18:01:44.077 +05:30 [INF] Content root path: E:\MP Online\8aug\HelpDeskManagment\HelpDesk.Mvc
+2026-08-07 18:01:51.188 +05:30 [INF] Request starting HTTP/1.1 GET https://localhost:59188/ - null null
+2026-08-07 18:01:51.309 +05:30 [INF] Executing endpoint 'HelpDesk.Mvc.Controllers.HomeController.Index (HelpDesk.Mvc)'
+2026-08-07 18:01:51.442 +05:30 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller HelpDesk.Mvc.Controllers.HomeController (HelpDesk.Mvc).
+2026-08-07 18:01:51.531 +05:30 [INF] Start processing HTTP request GET https://localhost:59186/api/Ticket/All
+2026-08-07 18:01:51.540 +05:30 [INF] Sending HTTP request GET https://localhost:59186/api/Ticket/All
+2026-08-07 18:01:51.859 +05:30 [INF] Received HTTP response headers after 307.2191ms - 200
+2026-08-07 18:01:51.874 +05:30 [INF] End processing HTTP request after 361.0619ms - 200
+2026-08-07 18:01:52.093 +05:30 [INF] Executing ViewResult, running view Index.
+2026-08-07 18:01:52.361 +05:30 [INF] Executed ViewResult - view Index executed in 287.6293ms.
+2026-08-07 18:01:52.366 +05:30 [INF] Executed action HelpDesk.Mvc.Controllers.HomeController.Index (HelpDesk.Mvc) in 920.337ms
+2026-08-07 18:01:52.368 +05:30 [INF] Executed endpoint 'HelpDesk.Mvc.Controllers.HomeController.Index (HelpDesk.Mvc)'
+2026-08-07 18:01:52.379 +05:30 [INF] HTTP GET / responded 200 in 1148.9756 ms
+2026-08-07 18:01:52.394 +05:30 [INF] Request finished HTTP/1.1 GET https://localhost:59188/ - 200 null text/html; charset=utf-8 1213.4352ms
+2026-08-07 18:29:05.152 +05:30 [INF] Starting HelpDesk.Mvc
+2026-08-07 18:29:05.350 +05:30 [INF] User profile is available. Using 'C:\Users\DeLL\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-08-07 18:29:05.392 +05:30 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
+2026-08-07 18:29:05.410 +05:30 [INF] Now listening on: https://localhost:59188
+2026-08-07 18:29:05.410 +05:30 [INF] Now listening on: http://localhost:59189
+2026-08-07 18:29:05.411 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-08-07 18:29:05.411 +05:30 [INF] Hosting environment: Development
+2026-08-07 18:29:05.411 +05:30 [INF] Content root path: E:\MP Online\8aug\HelpDeskManagment\HelpDesk.Mvc
+2026-08-07 18:29:26.129 +05:30 [INF] Request starting HTTP/2 GET https://localhost:59188/ - null null
+2026-08-07 18:29:26.149 +05:30 [INF] Executing endpoint 'HelpDesk.Mvc.Controllers.HomeController.Index (HelpDesk.Mvc)'
+2026-08-07 18:29:26.179 +05:30 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller HelpDesk.Mvc.Controllers.HomeController (HelpDesk.Mvc).
+2026-08-07 18:29:26.198 +05:30 [INF] Start processing HTTP request GET https://localhost:59186/api/Ticket/All
+2026-08-07 18:29:26.199 +05:30 [INF] Sending HTTP request GET https://localhost:59186/api/Ticket/All
+2026-08-07 18:29:26.685 +05:30 [INF] Received HTTP response headers after 482.2567ms - 200
+2026-08-07 18:29:26.688 +05:30 [INF] End processing HTTP request after 493.1195ms - 200
+2026-08-07 18:29:26.737 +05:30 [INF] Executing ViewResult, running view Index.
+2026-08-07 18:29:26.817 +05:30 [INF] Executed ViewResult - view Index executed in 84.0672ms.
+2026-08-07 18:29:26.820 +05:30 [INF] Executed action HelpDesk.Mvc.Controllers.HomeController.Index (HelpDesk.Mvc) in 640.8606ms
+2026-08-07 18:29:26.821 +05:30 [INF] Executed endpoint 'HelpDesk.Mvc.Controllers.HomeController.Index (HelpDesk.Mvc)'
+2026-08-07 18:29:26.823 +05:30 [INF] HTTP GET / responded 200 in 684.8565 ms
+2026-08-07 18:29:26.827 +05:30 [INF] Request finished HTTP/2 GET https://localhost:59188/ - 200 null text/html; charset=utf-8 698.5439ms
+2026-08-07 18:29:26.835 +05:30 [INF] Request starting HTTP/2 GET https://localhost:59188/css/site.css - null null
+2026-08-07 18:29:26.841 +05:30 [INF] Sending file. Request path: '/css/site.css'. Physical path: 'E:\MP Online\8aug\HelpDeskManagment\HelpDesk.Mvc\wwwroot\css\site.css'
+2026-08-07 18:29:26.841 +05:30 [INF] HTTP GET /css/site.css responded 200 in 5.4145 ms
+2026-08-07 18:29:26.842 +05:30 [INF] Request finished HTTP/2 GET https://localhost:59188/css/site.css - 200 362 text/css 6.5545ms
+2026-08-07 18:29:27.805 +05:30 [INF] Request starting HTTP/2 GET https://localhost:59188/favicon.ico - null null
+2026-08-07 18:29:27.808 +05:30 [INF] HTTP GET /favicon.ico responded 404 in 1.8110 ms
+2026-08-07 18:29:27.809 +05:30 [INF] Request finished HTTP/2 GET https://localhost:59188/favicon.ico - 404 0 null 3.3676ms
+2026-08-07 18:29:27.809 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:59188/favicon.ico, Response status code: 404
+2026-08-07 18:29:32.534 +05:30 [INF] Request starting HTTP/1.1 GET https://localhost:59188/ - null null
+2026-08-07 18:29:32.534 +05:30 [INF] Executing endpoint 'HelpDesk.Mvc.Controllers.HomeController.Index (HelpDesk.Mvc)'
+2026-08-07 18:29:32.535 +05:30 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller HelpDesk.Mvc.Controllers.HomeController (HelpDesk.Mvc).
+2026-08-07 18:29:32.536 +05:30 [INF] Start processing HTTP request GET https://localhost:59186/api/Ticket/All
+2026-08-07 18:29:32.536 +05:30 [INF] Sending HTTP request GET https://localhost:59186/api/Ticket/All
+2026-08-07 18:29:32.615 +05:30 [INF] Received HTTP response headers after 78.6333ms - 200
+2026-08-07 18:29:32.615 +05:30 [INF] End processing HTTP request after 79.4705ms - 200
+2026-08-07 18:29:32.622 +05:30 [INF] Executing ViewResult, running view Index.
+2026-08-07 18:29:32.626 +05:30 [INF] Executed ViewResult - view Index executed in 4.717ms.
+2026-08-07 18:29:32.627 +05:30 [INF] Executed action HelpDesk.Mvc.Controllers.HomeController.Index (HelpDesk.Mvc) in 91.8679ms
+2026-08-07 18:29:32.627 +05:30 [INF] Executed endpoint 'HelpDesk.Mvc.Controllers.HomeController.Index (HelpDesk.Mvc)'
+2026-08-07 18:29:32.627 +05:30 [INF] HTTP GET / responded 200 in 92.6126 ms
+2026-08-07 18:29:32.627 +05:30 [INF] Request finished HTTP/1.1 GET https://localhost:59188/ - 200 null text/html; charset=utf-8 93.132ms
+2026-08-07 18:43:01.634 +05:30 [INF] Request starting HTTP/2 GET https://localhost:59188/ - null null
+2026-08-07 18:43:01.634 +05:30 [INF] Executing endpoint 'HelpDesk.Mvc.Controllers.HomeController.Index (HelpDesk.Mvc)'
+2026-08-07 18:43:01.634 +05:30 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller HelpDesk.Mvc.Controllers.HomeController (HelpDesk.Mvc).
+2026-08-07 18:43:01.635 +05:30 [INF] Start processing HTTP request GET https://localhost:59186/api/Ticket/All
+2026-08-07 18:43:01.635 +05:30 [INF] Sending HTTP request GET https://localhost:59186/api/Ticket/All
+2026-08-07 18:43:01.667 +05:30 [INF] Received HTTP response headers after 31.7046ms - 200
+2026-08-07 18:43:01.667 +05:30 [INF] End processing HTTP request after 32.0579ms - 200
+2026-08-07 18:43:01.674 +05:30 [INF] Executing ViewResult, running view Index.
+2026-08-07 18:43:01.675 +05:30 [INF] Executed ViewResult - view Index executed in 1.6582ms.
+2026-08-07 18:43:01.675 +05:30 [INF] Executed action HelpDesk.Mvc.Controllers.HomeController.Index (HelpDesk.Mvc) in 41.0707ms
+2026-08-07 18:43:01.675 +05:30 [INF] Executed endpoint 'HelpDesk.Mvc.Controllers.HomeController.Index (HelpDesk.Mvc)'
+2026-08-07 18:43:01.675 +05:30 [INF] HTTP GET / responded 200 in 41.4662 ms
+2026-08-07 18:43:01.676 +05:30 [INF] Request finished HTTP/2 GET https://localhost:59188/ - 200 null text/html; charset=utf-8 41.9329ms
+2026-08-07 18:43:01.702 +05:30 [INF] Request starting HTTP/2 GET https://localhost:59188/css/site.css - null null
+2026-08-07 18:43:01.707 +05:30 [INF] Sending file. Request path: '/css/site.css'. Physical path: 'E:\MP Online\8aug\HelpDeskManagment\HelpDesk.Mvc\wwwroot\css\site.css'
+2026-08-07 18:43:01.708 +05:30 [INF] HTTP GET /css/site.css responded 200 in 5.2787 ms
+2026-08-07 18:43:01.708 +05:30 [INF] Request finished HTTP/2 GET https://localhost:59188/css/site.css - 200 362 text/css 5.6186ms
+2026-08-07 18:43:02.243 +05:30 [INF] Request starting HTTP/2 GET https://localhost:59188/favicon.ico - null null
+2026-08-07 18:43:02.244 +05:30 [INF] HTTP GET /favicon.ico responded 404 in 0.7577 ms
+2026-08-07 18:43:02.244 +05:30 [INF] Request finished HTTP/2 GET https://localhost:59188/favicon.ico - 404 0 null 1.0857ms
+2026-08-07 18:43:02.244 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:59188/favicon.ico, Response status code: 404
+2026-08-07 18:43:10.563 +05:30 [INF] Request starting HTTP/2 GET https://localhost:59188/Ticket/Details/1 - null null
+2026-08-07 18:43:10.563 +05:30 [INF] Executing endpoint 'HelpDesk.Mvc.Controllers.TicketController.Details (HelpDesk.Mvc)'
+2026-08-07 18:43:10.574 +05:30 [INF] Route matched with {action = "Details", controller = "Ticket"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Details(Int32) on controller HelpDesk.Mvc.Controllers.TicketController (HelpDesk.Mvc).
+2026-08-07 18:43:10.583 +05:30 [INF] Start processing HTTP request GET https://localhost:59186/api/Ticket/1
+2026-08-07 18:43:10.584 +05:30 [INF] Sending HTTP request GET https://localhost:59186/api/Ticket/1
+2026-08-07 18:43:10.649 +05:30 [INF] Received HTTP response headers after 65.4857ms - 200
+2026-08-07 18:43:10.649 +05:30 [INF] End processing HTTP request after 65.9439ms - 200
+2026-08-07 18:43:10.656 +05:30 [INF] Executing ViewResult, running view Details.
+2026-08-07 18:43:10.663 +05:30 [INF] Executed ViewResult - view Details executed in 8.4386ms.
+2026-08-07 18:43:10.664 +05:30 [INF] Executed action HelpDesk.Mvc.Controllers.TicketController.Details (HelpDesk.Mvc) in 89.1364ms
+2026-08-07 18:43:10.664 +05:30 [INF] Executed endpoint 'HelpDesk.Mvc.Controllers.TicketController.Details (HelpDesk.Mvc)'
+2026-08-07 18:43:10.664 +05:30 [INF] HTTP GET /Ticket/Details/1 responded 200 in 100.5264 ms
+2026-08-07 18:43:10.664 +05:30 [INF] Request finished HTTP/2 GET https://localhost:59188/Ticket/Details/1 - 200 null text/html; charset=utf-8 100.8427ms
+2026-08-07 18:43:13.604 +05:30 [INF] Request starting HTTP/2 GET https://localhost:59188/Ticket - null null
+2026-08-07 18:43:13.604 +05:30 [INF] Executing endpoint 'HelpDesk.Mvc.Controllers.TicketController.Index (HelpDesk.Mvc)'
+2026-08-07 18:43:13.609 +05:30 [INF] Route matched with {action = "Index", controller = "Ticket"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller HelpDesk.Mvc.Controllers.TicketController (HelpDesk.Mvc).
+2026-08-07 18:43:13.610 +05:30 [INF] Start processing HTTP request GET https://localhost:59186/api/Ticket/All
+2026-08-07 18:43:13.610 +05:30 [INF] Sending HTTP request GET https://localhost:59186/api/Ticket/All
+2026-08-07 18:43:13.623 +05:30 [INF] Received HTTP response headers after 12.8472ms - 200
+2026-08-07 18:43:13.623 +05:30 [INF] End processing HTTP request after 13.1152ms - 200
+2026-08-07 18:43:13.629 +05:30 [INF] Executing ViewResult, running view Index.
+2026-08-07 18:43:13.636 +05:30 [INF] Executed ViewResult - view Index executed in 7.3956ms.
+2026-08-07 18:43:13.636 +05:30 [INF] Executed action HelpDesk.Mvc.Controllers.TicketController.Index (HelpDesk.Mvc) in 26.322ms
+2026-08-07 18:43:13.636 +05:30 [INF] Executed endpoint 'HelpDesk.Mvc.Controllers.TicketController.Index (HelpDesk.Mvc)'
+2026-08-07 18:43:13.636 +05:30 [INF] HTTP GET /Ticket responded 200 in 31.9262 ms
+2026-08-07 18:43:13.636 +05:30 [INF] Request finished HTTP/2 GET https://localhost:59188/Ticket - 200 null text/html; charset=utf-8 32.3149ms
+2026-08-07 18:43:15.949 +05:30 [INF] Request starting HTTP/2 GET https://localhost:59188/Ticket/Create - null null
+2026-08-07 18:43:15.950 +05:30 [INF] Executing endpoint 'HelpDesk.Mvc.Controllers.TicketController.Create (HelpDesk.Mvc)'
+2026-08-07 18:43:15.955 +05:30 [INF] Route matched with {action = "Create", controller = "Ticket"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Create() on controller HelpDesk.Mvc.Controllers.TicketController (HelpDesk.Mvc).
+2026-08-07 18:43:15.956 +05:30 [INF] Executing ViewResult, running view Create.
+2026-08-07 18:43:16.002 +05:30 [INF] Executed ViewResult - view Create executed in 46.7378ms.
+2026-08-07 18:43:16.003 +05:30 [INF] Executed action HelpDesk.Mvc.Controllers.TicketController.Create (HelpDesk.Mvc) in 47.6945ms
+2026-08-07 18:43:16.003 +05:30 [INF] Executed endpoint 'HelpDesk.Mvc.Controllers.TicketController.Create (HelpDesk.Mvc)'
+2026-08-07 18:43:16.003 +05:30 [INF] HTTP GET /Ticket/Create responded 200 in 53.7548 ms
+2026-08-07 18:43:16.003 +05:30 [INF] Request finished HTTP/2 GET https://localhost:59188/Ticket/Create - 200 null text/html; charset=utf-8 54.0071ms
+2026-08-07 18:43:38.949 +05:30 [INF] Request starting HTTP/2 GET https://localhost:59188/Ticket/Details/1 - null null
+2026-08-07 18:43:38.949 +05:30 [INF] Executing endpoint 'HelpDesk.Mvc.Controllers.TicketController.Details (HelpDesk.Mvc)'
+2026-08-07 18:43:38.949 +05:30 [INF] Route matched with {action = "Details", controller = "Ticket"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Details(Int32) on controller HelpDesk.Mvc.Controllers.TicketController (HelpDesk.Mvc).
+2026-08-07 18:43:38.950 +05:30 [INF] Start processing HTTP request GET https://localhost:59186/api/Ticket/1
+2026-08-07 18:43:38.951 +05:30 [INF] Sending HTTP request GET https://localhost:59186/api/Ticket/1
+2026-08-07 18:43:43.020 +05:30 [INF] Executed action HelpDesk.Mvc.Controllers.TicketController.Details (HelpDesk.Mvc) in 4070.4876ms
+2026-08-07 18:43:43.020 +05:30 [INF] Executed endpoint 'HelpDesk.Mvc.Controllers.TicketController.Details (HelpDesk.Mvc)'
+2026-08-07 18:43:43.020 +05:30 [ERR] HTTP GET /Ticket/Details/1 responded 500 in 4071.1109 ms
+System.Net.Http.HttpRequestException: No connection could be made because the target machine actively refused it. (localhost:59186)
+ ---> System.Net.Sockets.SocketException (10061): No connection could be made because the target machine actively refused it.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|285_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendCoreAsync>g__Core|5_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingScopeHttpMessageHandler.<SendCoreAsync>g__Core|5_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at HelpDesk.Mvc.Services.TicketApiService.GetTicketByIdAsync(Int32 id) in E:\MP Online\8aug\HelpDeskManagment\HelpDesk.Mvc\Services\TicketApiService.cs:line 29
+   at HelpDesk.Mvc.Controllers.TicketController.Details(Int32 id) in E:\MP Online\8aug\HelpDeskManagment\HelpDesk.Mvc\Controllers\TicketController.cs:line 39
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2026-08-07 18:43:43.048 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+System.Net.Http.HttpRequestException: No connection could be made because the target machine actively refused it. (localhost:59186)
+ ---> System.Net.Sockets.SocketException (10061): No connection could be made because the target machine actively refused it.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|285_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendCoreAsync>g__Core|5_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingScopeHttpMessageHandler.<SendCoreAsync>g__Core|5_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at HelpDesk.Mvc.Services.TicketApiService.GetTicketByIdAsync(Int32 id) in E:\MP Online\8aug\HelpDeskManagment\HelpDesk.Mvc\Services\TicketApiService.cs:line 29
+   at HelpDesk.Mvc.Controllers.TicketController.Details(Int32 id) in E:\MP Online\8aug\HelpDeskManagment\HelpDesk.Mvc\Controllers\TicketController.cs:line 39
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2026-08-07 18:43:43.070 +05:30 [INF] Request finished HTTP/2 GET https://localhost:59188/Ticket/Details/1 - 500 null text/html; charset=utf-8 4121.3073ms
+2026-08-07 18:55:30.966 +05:30 [INF] Request starting HTTP/2 GET https://localhost:59188/ - null null
+2026-08-07 18:55:30.967 +05:30 [INF] Executing endpoint 'HelpDesk.Mvc.Controllers.HomeController.Index (HelpDesk.Mvc)'
+2026-08-07 18:55:30.967 +05:30 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller HelpDesk.Mvc.Controllers.HomeController (HelpDesk.Mvc).
+2026-08-07 18:55:30.967 +05:30 [INF] Start processing HTTP request GET https://localhost:59186/api/Ticket/All
+2026-08-07 18:55:30.968 +05:30 [INF] Sending HTTP request GET https://localhost:59186/api/Ticket/All
+2026-08-07 18:55:31.392 +05:30 [INF] Received HTTP response headers after 424.0426ms - 200
+2026-08-07 18:55:31.392 +05:30 [INF] End processing HTTP request after 424.2648ms - 200
+2026-08-07 18:55:31.403 +05:30 [INF] Executing ViewResult, running view Index.
+2026-08-07 18:55:31.404 +05:30 [INF] Executed ViewResult - view Index executed in 1.0522ms.
+2026-08-07 18:55:31.404 +05:30 [INF] Executed action HelpDesk.Mvc.Controllers.HomeController.Index (HelpDesk.Mvc) in 437.7007ms
+2026-08-07 18:55:31.405 +05:30 [INF] Executed endpoint 'HelpDesk.Mvc.Controllers.HomeController.Index (HelpDesk.Mvc)'
+2026-08-07 18:55:31.405 +05:30 [INF] HTTP GET / responded 200 in 438.0690 ms
+2026-08-07 18:55:31.405 +05:30 [INF] Request finished HTTP/2 GET https://localhost:59188/ - 200 null text/html; charset=utf-8 438.3779ms
+2026-08-07 18:55:31.419 +05:30 [INF] Request starting HTTP/2 GET https://localhost:59188/css/site.css - null null
+2026-08-07 18:55:31.420 +05:30 [INF] Sending file. Request path: '/css/site.css'. Physical path: 'E:\MP Online\8aug\HelpDeskManagment\HelpDesk.Mvc\wwwroot\css\site.css'
+2026-08-07 18:55:31.420 +05:30 [INF] HTTP GET /css/site.css responded 200 in 1.2591 ms
+2026-08-07 18:55:31.420 +05:30 [INF] Request finished HTTP/2 GET https://localhost:59188/css/site.css - 200 362 text/css 1.5244ms
+2026-08-07 18:55:40.475 +05:30 [INF] Request starting HTTP/2 GET https://localhost:59188/Ticket/Create - null null
+2026-08-07 18:55:40.475 +05:30 [INF] Executing endpoint 'HelpDesk.Mvc.Controllers.TicketController.Create (HelpDesk.Mvc)'
+2026-08-07 18:55:40.475 +05:30 [INF] Route matched with {action = "Create", controller = "Ticket"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Create() on controller HelpDesk.Mvc.Controllers.TicketController (HelpDesk.Mvc).
+2026-08-07 18:55:40.475 +05:30 [INF] Executing ViewResult, running view Create.
+2026-08-07 18:55:40.479 +05:30 [INF] Executed ViewResult - view Create executed in 3.7403ms.
+2026-08-07 18:55:40.479 +05:30 [INF] Executed action HelpDesk.Mvc.Controllers.TicketController.Create (HelpDesk.Mvc) in 4.0661ms
+2026-08-07 18:55:40.479 +05:30 [INF] Executed endpoint 'HelpDesk.Mvc.Controllers.TicketController.Create (HelpDesk.Mvc)'
+2026-08-07 18:55:40.479 +05:30 [INF] HTTP GET /Ticket/Create responded 200 in 4.4043 ms
+2026-08-07 18:55:40.479 +05:30 [INF] Request finished HTTP/2 GET https://localhost:59188/Ticket/Create - 200 null text/html; charset=utf-8 4.664ms
+2026-08-07 18:55:46.349 +05:30 [INF] Request starting HTTP/2 GET https://localhost:59188/.well-known/appspecific/com.chrome.devtools.json - null null
+2026-08-07 18:55:46.349 +05:30 [INF] HTTP GET /.well-known/appspecific/com.chrome.devtools.json responded 404 in 0.2109 ms
+2026-08-07 18:55:46.349 +05:30 [INF] Request finished HTTP/2 GET https://localhost:59188/.well-known/appspecific/com.chrome.devtools.json - 404 0 null 0.4736ms
+2026-08-07 18:55:46.349 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:59188/.well-known/appspecific/com.chrome.devtools.json, Response status code: 404
+2026-08-07 18:57:41.077 +05:30 [INF] Request starting HTTP/2 GET https://localhost:59188/Ticket/Create - null null
+2026-08-07 18:57:41.077 +05:30 [INF] Executing endpoint 'HelpDesk.Mvc.Controllers.TicketController.Create (HelpDesk.Mvc)'
+2026-08-07 18:57:41.077 +05:30 [INF] Route matched with {action = "Create", controller = "Ticket"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Create() on controller HelpDesk.Mvc.Controllers.TicketController (HelpDesk.Mvc).
+2026-08-07 18:57:41.078 +05:30 [INF] Executing ViewResult, running view Create.
+2026-08-07 18:57:41.080 +05:30 [INF] Executed ViewResult - view Create executed in 2.867ms.
+2026-08-07 18:57:41.081 +05:30 [INF] Executed action HelpDesk.Mvc.Controllers.TicketController.Create (HelpDesk.Mvc) in 3.1222ms
+2026-08-07 18:57:41.081 +05:30 [INF] Executed endpoint 'HelpDesk.Mvc.Controllers.TicketController.Create (HelpDesk.Mvc)'
+2026-08-07 18:57:41.081 +05:30 [INF] HTTP GET /Ticket/Create responded 200 in 3.4420 ms
+2026-08-07 18:57:41.081 +05:30 [INF] Request finished HTTP/2 GET https://localhost:59188/Ticket/Create - 200 null text/html; charset=utf-8 3.695ms
+2026-08-07 18:57:41.097 +05:30 [INF] Request starting HTTP/2 GET https://localhost:59188/css/site.css - null null
+2026-08-07 18:57:41.098 +05:30 [INF] Sending file. Request path: '/css/site.css'. Physical path: 'E:\MP Online\8aug\HelpDeskManagment\HelpDesk.Mvc\wwwroot\css\site.css'
+2026-08-07 18:57:41.098 +05:30 [INF] HTTP GET /css/site.css responded 200 in 0.9640 ms
+2026-08-07 18:57:41.098 +05:30 [INF] Request finished HTTP/2 GET https://localhost:59188/css/site.css - 200 362 text/css 1.3263ms
+2026-08-07 18:57:53.162 +05:30 [INF] Request starting HTTP/2 GET https://localhost:59188/Ticket/Details/1 - null null
+2026-08-07 18:57:53.162 +05:30 [INF] Executing endpoint 'HelpDesk.Mvc.Controllers.TicketController.Details (HelpDesk.Mvc)'
+2026-08-07 18:57:53.162 +05:30 [INF] Route matched with {action = "Details", controller = "Ticket"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Details(Int32) on controller HelpDesk.Mvc.Controllers.TicketController (HelpDesk.Mvc).
+2026-08-07 18:57:53.163 +05:30 [INF] Start processing HTTP request GET https://localhost:59186/api/Ticket/1
+2026-08-07 18:57:53.163 +05:30 [INF] Sending HTTP request GET https://localhost:59186/api/Ticket/1
+2026-08-07 18:57:53.296 +05:30 [INF] Received HTTP response headers after 133.0542ms - 200
+2026-08-07 18:57:53.296 +05:30 [INF] End processing HTTP request after 133.2198ms - 200
+2026-08-07 18:57:53.301 +05:30 [INF] Executing ViewResult, running view Details.
+2026-08-07 18:57:53.302 +05:30 [INF] Executed ViewResult - view Details executed in 1.0447ms.
+2026-08-07 18:57:53.302 +05:30 [INF] Executed action HelpDesk.Mvc.Controllers.TicketController.Details (HelpDesk.Mvc) in 139.6216ms
+2026-08-07 18:57:53.302 +05:30 [INF] Executed endpoint 'HelpDesk.Mvc.Controllers.TicketController.Details (HelpDesk.Mvc)'
+2026-08-07 18:57:53.302 +05:30 [INF] HTTP GET /Ticket/Details/1 responded 200 in 139.9243 ms
+2026-08-07 18:57:53.302 +05:30 [INF] Request finished HTTP/2 GET https://localhost:59188/Ticket/Details/1 - 200 null text/html; charset=utf-8 140.11ms

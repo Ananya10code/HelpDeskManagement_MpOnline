@@ -1,0 +1,39 @@
+{
+  "Version": 1,
+  "Hash": "2VvPZCfKPaNdwS26CmPIKC6z4SZidzW6RX8Gy516E9w=",
+  "Source": "HelpDesk.Mvc",
+  "BasePath": "_content/HelpDesk.Mvc",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "HelpDesk.Mvc\\wwwroot",
+      "Source": "HelpDesk.Mvc",
+      "ContentRoot": "E:\\MP Online\\8aug\\HelpDeskManagment\\HelpDesk.Mvc\\wwwroot\\",
+      "BasePath": "_content/HelpDesk.Mvc",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "E:\\MP Online\\8aug\\HelpDeskManagment\\HelpDesk.Mvc\\wwwroot\\css\\site.css",
+      "SourceId": "HelpDesk.Mvc",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\MP Online\\8aug\\HelpDeskManagment\\HelpDesk.Mvc\\wwwroot\\",
+      "BasePath": "_content/HelpDesk.Mvc",
+      "RelativePath": "css/site.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\site.css"
+    }
+  ]
+}
